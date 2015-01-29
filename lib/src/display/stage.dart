@@ -359,6 +359,9 @@ class Stage extends DisplayObjectContainer {
       case StageScaleMode.SHOW_ALL:
         scaleX = scaleY = (ratioWidth < ratioHeight) ? ratioWidth : ratioHeight;
         break;
+      default:
+        scaleX = _stageScaleMode.scaleX;
+        scaleY = _stageScaleMode.scaleY;
     }
 
     switch (_stageAlign) {
